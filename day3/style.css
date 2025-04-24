@@ -1,0 +1,91 @@
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.category {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+
+.category li {
+    padding: 8px;
+    background-color: #eee;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.card h2, .card p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.25;
+}
+
+.card h2 {
+    margin: 20px 0;
+}
+
+.card p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+}
+
+.card:hover{
+    box-shadow: 20px 20px 40px #ddd;
+}
+
+.card span {
+    display: inline-block;
+    text-align: right;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+.news-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 90%;
+}
+}
