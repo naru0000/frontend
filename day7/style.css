@@ -1,0 +1,31 @@
+:root {
+    --bg-color: #efefef;
+    --text-color: #1f1f1f;
+    --buton-bg: #3182F7;
+    --button-text: #fff;
+}
+
+:root[data-theme="dark"] {
+    --bg-color: #18171D;
+    --text-color: #fff;
+    --buton-bg: #fff;
+    --button-text: #1f1f1f;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--buton-bg);
+    color: var(--button-text);
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+

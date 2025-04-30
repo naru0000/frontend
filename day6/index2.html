@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-grow / flex-shrink 심화 예제</title>
+  <style>
+    .container {
+      display: flex;
+      width: 1000px; /* 여기서 창 크기 조절 실험 */
+      height: 200px;
+      border: 3px solid black;
+    }
+    .box {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      line-height: 200px;
+      box-sizing: border-box;
+    }
+    .box1 {
+      flex: 2 1 200px; /* grow 2배 */
+      background-color: lightcoral;
+    }
+    .box2 {
+      flex: 1 1 200px; /* 기본 grow 1 */
+      background-color: lightseagreen;
+    }
+    .box3 {
+      flex: 1 2 200px; /* shrink 2배 */
+      background-color: lightsalmon;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box box1">Box 1</div>
+  <div class="box box2">Box 2</div>
+  <div class="box box3">Box 3</div>
+</div>
+
+</body>
+</html>
