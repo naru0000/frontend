@@ -1,0 +1,30 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>alert 실습</title>
+  </head>
+  <body>
+      <!-- <button id="alertBtn">버튼</button> -->
+      <button id="promptbtn">버튼</button>
+      <h1 id="greeting"></h1>
+  
+      <script>
+        //   let alertBtn = document.getElementById ("alertBtn");
+        //   alertBtn.addEventListener('click', function() {
+        //     window.alert("경고창입니다.");
+        //   });
+        let promptBtn = document.getElementById ("promptbtn");
+        let greeTing = document.getElementById ("greeting");
+        promptBtn.addEventListener("click", function(){
+            const name = prompt("이름을 입력하세요");
+            if (name) {
+                greeTing.textContent = "안녕하세요," + name + "님!";
+            } else {
+                greeTing.textContent = "이름을 입력하지 않았습니다.";
+            }
+        });
+      </script>
+  </body>
+  </html>

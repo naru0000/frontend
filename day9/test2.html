@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>alert 실습 예제</title>
+</head>
+<body>
+    <input type="text" id="userInput" placeholder="이름을 입력해주세요">
+    <input type="button" id="inputAlertBtn" value="버튼 클릭">
+    <button id="alertBtn">경고창 띄우기</button>
+    <button id = 'promptBtn'>프롬프트 띄우기</button>
+    <p id = greeting></p>  
+    <script>
+        const btn = document.getElementById("alertBtn");
+        const promptBtn = document.getElementById("promptBtn");
+        const greeting = document.getElementById("greeting");
+        const inputAlertBtn = document.getElementById("inputAlertBtn");
+        const userInput = document.getElementById("userInput");
+    
+        btn.addEventListener("click", function() {
+          alert("버튼이 클릭되었습니다!");
+        });
+    
+        promptBtn.addEventListener("click", function() {
+          const name = prompt("이름을 입력하세요");
+          if (name) {
+            greeting.textContent = "안녕하세요, " + name + "님!";
+          } else {
+            greeting.textContent = "이름을 입력하지 않았습니다.";
+          }
+        });
+
+        userInput.addEventListener("keydown", function(event){
+          console.log(event);
+          if (event.key === 'Enter') {
+            inputAlertBtn.click();
+          }
+        });
+    
+        inputAlertBtn.addEventListener("click", function(){
+            const value = userInput.value;
+            if (value.trim()) {
+                alert("내 이름은" + value);
+            } else {
+                alert("이름을 똑바로 이야기해야지!");
+            }
+        });
+
+      </script>
+</body>
+</html>
+
