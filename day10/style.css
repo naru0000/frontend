@@ -36,6 +36,11 @@ body * {
     border-radius: 5px;
 }
 
+.login-container input:focus {
+    border-color: #4285f4;
+    outline: none;
+}
+
 .login-container input:nth-child(2) {
     margin-top: 0;
 }
