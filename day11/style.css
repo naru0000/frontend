@@ -1,0 +1,49 @@
+body * {
+    box-sizing: border-box;
+}
+
+.card-container {
+    display: flex;
+    gap: 50px;
+    padding: 30px;
+}
+
+.card-container input[type="checkbox"] {display: none;}
+
+.card-container .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card-container .card div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    background-color: #4690ff;
+}
+
+.card-container .card .back {
+    transform: rotateY(180deg);
+    background-color: #ff3c8d;
+}
+
+.card-wrapper input:checked + label .card {
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+  transform: scale(1.1) rotate(5deg) translateY(-10px) skewX(20deg);
+}
