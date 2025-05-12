@@ -45,5 +45,5 @@ body * {
 }
 
 .card:hover {
-  transform: scale(1.1) rotate(5deg) translateY(-10px) skewX(20deg);
+    transform: scale(1.1) rotate(5deg) translateY(-10px) skewX(20deg);
 }
